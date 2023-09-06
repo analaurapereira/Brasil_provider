@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900); /*importa o efeito do botão*/
+
+body {
+    background-color: var(--bg-color);
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#container{
+    width: 360px;
+    height: 712px;
+    margin: 50px auto 10px;
+    display: inline;
+    position: relative;
+}
+
+.container img {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+}
+
+.lista{
+    margin-left: 300px;
+    margin-top: -90px;
+    color:white;
+}
+.lista li{
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+    color:white;
+}
+
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: white; 
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    border: none;
+    border-radius: 30px;
+}
+  
+.button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 50px;
+    height: 50px;
+    scale: 0;
+    z-index: -1;
+    background-color: #FF8A12;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+  
+.button:hover::before {
+    scale: 3;
+}
+  
+.button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+
+:root {
+  --text-color: whitesmoke;
+  --bg-color: rgb(26, 25, 25);
+  /* cor da borda dos links no fundo escuro*/
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  /* superfície dos links no fundo escuro */
+  --surface-color: rgba(255, 255, 255, 0.05);
+  /* superfície dos links no fundo escuro ao passar o mouse*/
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  /* faz um realce nos ícones das redes socias */
+  --realce-color: rgba(255, 255, 255, 0.2);
+  /* background do switch com fundo preto*/
+  --switch-bg-url: url(./moon-stars.svg);
+}
+
+.claro {
+  --text-color: black;
+  --bg-color:whitesmoke;
+  /* cor da borda dos links no fundo claro*/
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  /* superfície dos links no fundo claro */
+  --surface-color: rgba(0, 0, 0, 0.05);
+  /* superfície dos links no fundo claro ao passar o mouse*/
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  /* faz um realce nos ícones das redes socias */
+  --realce-color: rgba(0, 0, 0, 0.1);
+  /* background do switch com fundo branco*/
+  --switch-bg-url: url(sun.svg);
+}
+
+#switch {
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
+    width: 64px;
+    margin: 0;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border-radius: 50%;
+    position: absolute; /* posicionado em relação à div switch */
+    top: 50%;
+    left: 0;
+    z-index: 1; /* camada 1, outros elementos estão na camada 0 */
+    /* translate ele é um deslocamento do elemento
+    valor é negativo pois precisamos subir elemento*/
+    transform: translateY(-50%); ;
+}
+
+#switch span {
+    border: 1px solid rgb(212, 212, 212);
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border-radius: 9999px;
+}
+
+.claro #switch button {
+    right: 0;
+    left: initial;
+}
+
+#profile img {
+    width: 200px;
+}
+#profile p {
+    font-weight: 500;
+    line-height: 24px;   
+}
+  
+#crm {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 900px;
+    z-index: -1;
+}
+  
+#crm img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#escrita {
+    color: var(--text-color);
+    margin-top:950px;
+    margin-left:90px;
+    margin-bottom:90px;
+}
+
+#transition {
+    position: absolute;
+    top: 790px; 
+    left: 0;
+    width: 100%;
+    height: 270px; 
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6025582107843137) 11%, rgba(0,0,0,0.8350512079831933) 19%, rgba(0,0,0,0.9274881827731092) 29%, rgba(0,0,0,1) 45%, rgba(0,0,0,0.9695049894957983) 54%, rgba(0,0,0,0.8994769782913166) 65%, rgba(0,0,0,0.8294489670868348) 71%, rgba(0,0,0,0.636171656162465) 80%, rgba(0,0,0,0.35045737044817926) 91%, rgba(0,0,0,0) 100%);
+}
