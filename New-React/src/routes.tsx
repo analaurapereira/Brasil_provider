@@ -5,7 +5,6 @@ import { Servicos } from "./pages/servicos"
 import { Contato } from "./pages/contato"
 import { SobreNos } from "./pages/sobreNos"
 export function RouteComponent() {
-
     return (
         <Routes>
             <Route path={'/' || '/home'} element={<HomePage/>}/>

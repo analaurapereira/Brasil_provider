@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Container, MinHeight, Start, Column } from '../styles/container.styles'; // 
+import { Container, MinHeight, Start, Column } from '../styles/container.styles.ts'; // 
 
 interface ContainerProps {
     customClass?: string;
@@ -21,5 +21,6 @@ function CustomContainer(props: ContainerProps) {
 }
 
 export default CustomContainer;
+
 
 

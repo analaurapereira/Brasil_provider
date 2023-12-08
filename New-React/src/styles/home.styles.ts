@@ -5,6 +5,6 @@ export const StyledTitle = styled.h1`
     font-size: 20pt;
 `
 
-export const StyledParagraph = styled.p`
+export const StyledName = styled.p`
     color: red;
 `

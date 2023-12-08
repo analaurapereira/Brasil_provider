@@ -35,3 +35,4 @@ export const CopyRightSpan = styled.span`
     font-weight: bold;
     color: #40FF00;
 `;
+

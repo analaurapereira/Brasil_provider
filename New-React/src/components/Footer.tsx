@@ -1,6 +1,6 @@
 import {FaInstagram, FaLinkedin, FaFacebook} from 'react-icons/fa'
 
-import { FooterWrapper, SocialList, SocialListItem, SocialIcon, CopyRight, CopyRightSpan } from '../styles/footer.styles';
+import { FooterWrapper, SocialList, SocialListItem, SocialIcon, CopyRight, CopyRightSpan } from '../styles/footer.styles.ts';
 
 export function Footer(){
     return(

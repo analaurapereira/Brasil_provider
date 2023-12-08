@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 // Estilos do componente Navbar
 export const NavbarWrapper = styled.div`
     display: flex;

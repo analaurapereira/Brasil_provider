@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { Navbar } from "../components/Navbar"
-import { Footer } from "../components/Footer"
+import { Navbar } from "../components/Navbar.tsx"
+import { Footer } from "../components/Footer.tsx"
+import { StyledTitle, StyledName  } from '../styles/home.styles.ts'
 
-export function HomePage() {
+export const HomePage: React.FC = () => {
     const images = [1, 2, 3, 4, 5, 6]
 
     const [cont, setCont] = useState(images.length)
@@ -12,8 +13,12 @@ export function HomePage() {
             <Navbar/>
             <section>
                 <div>
-                    <h1 >PRECISA MELHORAR A  <br/> PROSPEÇÃO DE CLIENTES E <br/> AUMENTAR VENDAS? <br/></h1>
+                    <StyledTitle>
+                     <h1 >PRECISA MELHORAR A  <br/> PROSPEÇÃO DE CLIENTES E <br/> AUMENTAR VENDAS? <br/></h1>
+                    </StyledTitle> 
+                    <StyledName>
                     <h2 > <br/>NOSSO CRM É A SOLUÇÃO PARA VOCÊ</h2>
+                       </StyledName>
                 </div>
                 <div>
                     <button onClick={() => setCont(cont-1)}>icon</button>
